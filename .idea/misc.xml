@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/HP/AndroidStudioProjects/HospitalityProjectIDNP/app/src/main/res/drawable/ic_hospital_svgrepo_com.xml" value="0.15989583333333332" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/HospitalityProjectIDNP/app/src/main/res/drawable/ic_icons8_edit.xml" value="0.1" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/HospitalityProjectIDNP/app/src/main/res/drawable/ic_icons8_trash.xml" value="0.2755208333333333" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/HospitalityProjectIDNP/app/src/main/res/layout/fragment_hospital_view.xml" value="0.19293478260869565" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/HospitalityProjectIDNP/app/src/main/res/layout/list_hospitales.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/HospitalityProjectIDNP/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
