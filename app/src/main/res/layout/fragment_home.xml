@@ -40,7 +40,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:text="@string/ReservarCita"
-            android:textColor="@color/black"
             android:backgroundTint="@color/main_theme"/>
     </LinearLayout>
 

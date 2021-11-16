@@ -37,6 +37,7 @@
             android:layout_marginTop="40dp"
             android:layout_marginRight="60dp"
             android:layout_marginLeft="60dp"
+            android:backgroundTint="@color/main_theme"
             android:text="Iniciar Sesión" />
 
         <Button
@@ -46,6 +47,7 @@
             android:layout_marginTop="2dp"
             android:layout_marginRight="60dp"
             android:layout_marginLeft="60dp"
+            android:backgroundTint="@color/main_theme"
             android:text="Registrarme" />
     </LinearLayout>
 
