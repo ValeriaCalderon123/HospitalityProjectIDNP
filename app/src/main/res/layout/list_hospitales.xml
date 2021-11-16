@@ -1,79 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    app:cardCornerRadius="10dp"
-    app:cardElevation="3dp"
-    app:cardUseCompatPadding="true"
-    app:cardBackgroundColor="#e6f5fa"
-    >
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize">
 
-    <RelativeLayout
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:orientation="vertical"
+        app:cardBackgroundColor="#e6f5fa"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-3dp">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
 
-        <ImageView
-            android:id="@+id/imagen"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ic_hospital_svgrepo_com" />
+            <ImageView
+                android:id="@+id/imagen"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:srcCompat="@drawable/ic_hospital_svgrepo_com" />
 
-        <TextView
-            android:id="@+id/titulo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_toEndOf="@+id/imagen"
-            android:layout_toRightOf="@+id/imagen"
-            android:text="Nombre del Hospital"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/imagen"
+                android:layout_toRightOf="@+id/imagen"
+                android:text="Nombre del Hospital"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/altitud"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/titulo"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_toEndOf="@+id/imagen"
-            android:layout_toRightOf="@+id/imagen"
-            android:text="Altitud" />
+            <TextView
+                android:id="@+id/direccion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titulo"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@+id/imagen"
+                android:layout_toRightOf="@+id/imagen"
+                android:text="Direccion" />
 
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/card_view_hospital_buttonEdit"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="5dp"
-            android:backgroundTint="#e6f5fa"
-            android:foregroundTint="@color/black"
-            android:src="@mipmap/ic_launcher_foreground">
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/card_view_hospital_buttonEdit"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="#e6f5fa"
+                android:foregroundTint="@color/black"
+                android:src="@drawable/ic_view_eye_24" />
 
-        </androidx.appcompat.widget.AppCompatImageButton>
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/card_view_hospital_buttonDelete"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/card_view_hospital_buttonEdit"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="#e6f5fa"
+                android:foregroundTint="@color/black"
+                android:src="@drawable/ic_location_on_24" />
 
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/card_view_hospital_buttonDelete"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_below="@id/card_view_hospital_buttonEdit"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="5dp"
-            android:backgroundTint="#e6f5fa"
-            android:foregroundTint="@color/black"
-            android:src="@drawable/ic_icons8_trash">
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 
-        </androidx.appcompat.widget.AppCompatImageButton>
-    </RelativeLayout>
-</androidx.cardview.widget.CardView>
-
-
+</androidx.constraintlayout.widget.ConstraintLayout>
