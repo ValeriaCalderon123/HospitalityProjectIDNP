@@ -8,8 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.hospitalityproject.views.R
-import com.example.hospitalityproject.views.databinding.FragmentNotificationsBinding
+import com.example.hospitalityproject.databinding.FragmentNotificationsBinding
 
 class NotificationsFragment : Fragment() {
 
