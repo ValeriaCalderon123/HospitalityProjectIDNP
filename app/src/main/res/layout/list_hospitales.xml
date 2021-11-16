@@ -20,16 +20,19 @@
 
         <ImageView
             android:id="@+id/imagen"
+            android:layout_marginTop="15dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/ic_hospital_svgrepo_com" />
 
         <TextView
-            android:id="@+id/titulo"
+            android:id="@+id/hospital_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:layout_marginRight="80dp"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_toEndOf="@+id/imagen"
             android:layout_toRightOf="@+id/imagen"
             android:text="Nombre del Hospital"
@@ -37,42 +40,59 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/altitud"
+            android:id="@+id/hospital_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/titulo"
+            android:layout_below="@+id/hospital_name"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:layout_toEndOf="@+id/imagen"
             android:layout_toRightOf="@+id/imagen"
-            android:text="Altitud" />
+            android:text="id" />
+
+        <TextView
+            android:id="@+id/hospital_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hospital_id"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/imagen"
+            android:layout_toRightOf="@+id/imagen"
+            android:text="Teléfono" />
+
+        <TextView
+            android:id="@+id/hospital_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hospital_phone"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/imagen"
+            android:layout_toRightOf="@+id/imagen"
+            android:text="Dirección" />
+
+
+
+
 
         <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/card_view_hospital_buttonEdit"
+            android:id="@+id/card_view_hospital_buttonGps"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="45dp"
             android:backgroundTint="#e6f5fa"
             android:foregroundTint="@color/black"
-            android:src="@mipmap/ic_launcher_foreground">
+            android:src="@drawable/ic_gps_svgrepo_com">
 
         </androidx.appcompat.widget.AppCompatImageButton>
 
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/card_view_hospital_buttonDelete"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_below="@id/card_view_hospital_buttonEdit"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="5dp"
-            android:backgroundTint="#e6f5fa"
-            android:foregroundTint="@color/black"
-            android:src="@drawable/ic_icons8_trash">
-
-        </androidx.appcompat.widget.AppCompatImageButton>
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
 
