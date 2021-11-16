@@ -18,7 +18,7 @@
         tools:layout="@layout/fragment_hospitals" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_analytics"
         android:name="com.example.hospitalityproject.views.ui.notifications.NotificationsFragment"
         android:label="@string/title_analytics"
         tools:layout="@layout/fragment_notifications" />
