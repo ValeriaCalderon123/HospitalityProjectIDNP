@@ -5,49 +5,15 @@
       <map>
         <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.21875" />
         <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.21875" />
-        <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/drawable/ic_gps_svgrepo_com.xml" value="0.3645833333333333" />
         <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.21875" />
         <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/drawable/ic_hospital_svgrepo_com.xml" value="0.21875" />
         <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/drawable/ic_icons8_edit.xml" value="0.21875" />
         <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/drawable/ic_icons8_trash.xml" value="0.21875" />
         <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/drawable/ic_launcher_background.xml" value="0.21875" />
         <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.21875" />
-        <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/layout/activity_login2.xml" value="0.24365942028985507" />
         <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/layout/activity_main.xml" value="0.20260416666666667" />
-        <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/layout/activity_menu.xml" value="0.24365942028985507" />
-        <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/layout/fragment_dashboard.xml" value="0.254981884057971" />
-        <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/layout/fragment_home.xml" value="0.21603260869565216" />
-        <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/layout/fragment_hospital_view.xml" value="0.21603260869565216" />
-        <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/layout/fragment_hospitals.xml" value="0.254981884057971" />
-        <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/layout/fragment_notifications.xml" value="0.254981884057971" />
-        <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/layout/fragment_profile.xml" value="0.24365942028985507" />
-        <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/layout/list_hospitales.xml" value="0.6056971514242878" />
-        <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3625" />
         <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.21875" />
         <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.21875" />
-        <entry key="..\:/Programming/IDNP/FinalProject3/HospitalityProjectIDNP/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3625" />
-        <entry key="..\:/Users/ADMIN CAR/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1175925925925926" />
-        <entry key="..\:/Users/ADMIN CAR/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/drawable/ic_analytics_menu.xml" value="0.20555555555555555" />
-        <entry key="..\:/Users/ADMIN CAR/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/drawable/ic_baseline_person_menu.xml" value="0.20555555555555555" />
-        <entry key="..\:/Users/ADMIN CAR/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.1175925925925926" />
-        <entry key="..\:/Users/ADMIN CAR/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1175925925925926" />
-        <entry key="..\:/Users/ADMIN CAR/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/drawable/ic_home_menu.xml" value="0.1175925925925926" />
-        <entry key="..\:/Users/ADMIN CAR/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/drawable/ic_hospital_menu.xml" value="0.18" />
-        <entry key="..\:/Users/ADMIN CAR/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/drawable/ic_hospital_svgrepo_com.xml" value="0.1175925925925926" />
-        <entry key="..\:/Users/ADMIN CAR/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/drawable/ic_icons8_edit.xml" value="0.1175925925925926" />
-        <entry key="..\:/Users/ADMIN CAR/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/drawable/ic_icons8_trash.xml" value="0.1175925925925926" />
-        <entry key="..\:/Users/ADMIN CAR/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1175925925925926" />
-        <entry key="..\:/Users/ADMIN CAR/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.1175925925925926" />
-        <entry key="..\:/Users/ADMIN CAR/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/layout/activity_login2.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/ADMIN CAR/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/layout/activity_main.xml" value="0.36102564102564105" />
-        <entry key="..\:/Users/ADMIN CAR/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/layout/activity_menu.xml" value="0.33" />
-        <entry key="..\:/Users/ADMIN CAR/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/layout/fragment_dashboard.xml" value="0.10092592592592593" />
-        <entry key="..\:/Users/ADMIN CAR/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/layout/fragment_home.xml" value="0.1925925925925926" />
-        <entry key="..\:/Users/ADMIN CAR/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/layout/fragment_hospital_view.xml" value="0.33" />
-        <entry key="..\:/Users/ADMIN CAR/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/layout/fragment_notifications.xml" value="0.1925925925925926" />
-        <entry key="..\:/Users/ADMIN CAR/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/layout/fragment_profile.xml" value="0.1925925925925926" />
-        <entry key="..\:/Users/ADMIN CAR/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/layout/list_hospitales.xml" value="0.1925925925925926" />
-        <entry key="..\:/Users/ADMIN CAR/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/menu/bottom_nav_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/valer/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/layout/activity_main.xml" value="0.16983695652173914" />
         <entry key="..\:/Users/valer/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/layout/activity_menu.xml" value="0.15715579710144928" />
         <entry key="..\:/Users/valer/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/layout/fragment_dashboard.xml" value="0.17527173913043478" />
@@ -55,6 +21,9 @@
         <entry key="..\:/Users/valer/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/layout/fragment_profile.xml" value="0.17527173913043478" />
         <entry key="..\:/Users/valer/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/layout/list_hospitales.xml" value="0.18115942028985507" />
         <entry key="..\:/Users/valer/Documents/GitHub/HospitalityProjectIDNP/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/valer/Documents/GitHub/IDNP/v2/HospitalityProjectIDNP/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.18" />
+        <entry key="..\:/Users/valer/Documents/GitHub/IDNP/v2/HospitalityProjectIDNP/app/src/main/res/layout/activity_login2.xml" value="0.22" />
+        <entry key="..\:/Users/valer/Documents/GitHub/IDNP/v2/HospitalityProjectIDNP/app/src/main/res/layout/activity_register.xml" value="0.15" />
       </map>
     </option>
   </component>
