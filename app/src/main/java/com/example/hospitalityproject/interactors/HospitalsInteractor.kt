@@ -5,9 +5,8 @@ import android.content.Context
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.hospitalityproject.MainActivity
 import com.example.hospitalityproject.adapters.FirestoreAdapterHospitals
-import com.example.hospitalityproject.adapters.Hospital
+import com.example.hospitalityproject.model.Hospital
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.firestore.FirebaseFirestore
 

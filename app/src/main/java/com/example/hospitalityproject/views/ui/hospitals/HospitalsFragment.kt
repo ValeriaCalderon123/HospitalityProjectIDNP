@@ -143,7 +143,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hospitalityproject.R
 import com.example.hospitalityproject.adapters.AdapterHospitals
-import com.example.hospitalityproject.adapters.Hospital
+import com.example.hospitalityproject.model.Hospital
 import com.google.firebase.firestore.*
 
 class HospitalsFragment : Fragment() {

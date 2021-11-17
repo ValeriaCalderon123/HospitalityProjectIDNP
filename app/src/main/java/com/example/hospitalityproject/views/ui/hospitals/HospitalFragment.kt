@@ -8,7 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.hospitalityproject.R
-import com.example.hospitalityproject.adapters.Hospital
+import com.example.hospitalityproject.model.Hospital
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.GeoPoint
 import kotlinx.android.synthetic.main.fragment_hospital.view.*

@@ -1,4 +1,4 @@
-package com.example.hospitalityproject.adapters
+package com.example.hospitalityproject.model
 
 import com.google.firebase.firestore.GeoPoint
 
