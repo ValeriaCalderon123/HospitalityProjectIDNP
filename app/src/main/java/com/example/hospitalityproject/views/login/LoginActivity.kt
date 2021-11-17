@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.hospitalityproject.R
+import com.example.hospitalityproject.model.Initialization.Companion.pref
 import com.example.hospitalityproject.views.MenuActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login2.*
@@ -33,6 +34,7 @@ class LoginActivity : AppCompatActivity() {
                         )
 
                         toast1.show()
+                        pref.saveEmail(editTextEmail.text.toString())
                         val intent = Intent(this, MenuActivity::class.java).apply {
                         }
                         startActivity(intent)

@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.ui.profile.ProfileFragment">
+    tools:context=".views.ui.profile.ProfileFragment"
+    android:background="#FFFFFF"
+    >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,15 +27,15 @@
             android:textColor="#009688"
             android:textSize="24sp" />
         <EditText
-            android:id="@+id/textFirstNameRegister"
+            android:id="@+id/textFirstNameProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Ingrese nombre"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="25dp"
             android:inputType="textPersonName" />
         <EditText
-            android:id="@+id/textLastNameRegister"
+            android:id="@+id/textLastNameProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -41,7 +43,7 @@
             android:layout_marginTop="15dp"
             android:inputType="textPersonName" />
         <EditText
-            android:id="@+id/textAddressRegister"
+            android:id="@+id/textAddressProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -49,25 +51,18 @@
             android:layout_marginTop="15dp"
             android:inputType="textPersonName" />
         <EditText
-            android:id="@+id/textPhoneRegister"
+            android:id="@+id/textPhoneProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Ingrese teléfono"
             android:layout_marginTop="15dp"
             android:inputType="textPersonName" />
-        <EditText
-            android:id="@+id/textEmailRegister"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Email"
-            android:layout_marginTop="15dp"
-            android:inputType="textPersonName" />
+
 
 
         <Button
-            android:id="@+id/buttonRegister"
+            android:id="@+id/buttonSaveProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -77,13 +72,13 @@
             android:text="GUARDAR" />
 
         <Button
-            android:id="@+id/buttonCancel"
+            android:id="@+id/buttonLogout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="1dp"
             android:layout_marginRight="60dp"
             android:layout_marginLeft="60dp"
             android:backgroundTint="@color/main_theme"
-            android:text="CANCELAR" />
+            android:text="CERRAR SESIÓN" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
