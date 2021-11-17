@@ -7,10 +7,9 @@ data class Hospital(
     var name: String ?= null,
     var address: String ?= null,
     var phone: String ?= null,
-    var status: Boolean ?= null,
+    var status: Boolean ?= false,
     var ubication: GeoPoint ?= null
 )
-
 /*
 
 data class Hospital(

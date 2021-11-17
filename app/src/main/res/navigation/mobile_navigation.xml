@@ -22,9 +22,17 @@
         android:name="com.example.hospitalityproject.views.ui.notifications.NotificationsFragment"
         android:label="@string/title_analytics"
         tools:layout="@layout/fragment_notifications" />
+
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.example.hospitalityproject.views.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_hospital"
+        android:name="com.example.hospitalityproject.views.ui.hospitals.HospitalFragment"
+        android:label="Test"
+        tools:layout="@layout/fragment_hospital" />
+
 </navigation>
