@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.login.LoginActivity">
-
+    tools:context=".views.login.RegisterActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="20dp"
         android:orientation="vertical">
+
         <TextView
             android:id="@+id/textTitleRegister"
             android:layout_width="match_parent"
@@ -19,23 +19,55 @@
             android:ems="10"
             android:hint="Ingrese nombre"
             android:inputType="textPersonName"
-            android:text="INICIAR SESIÓN"
+            android:text="REGISTRARME"
             android:layout_marginRight="60dp"
             android:layout_marginLeft="60dp"
             android:textAlignment="center"
             android:textColor="#009688"
             android:textSize="24sp" />
         <EditText
-            android:id="@+id/editTextEmail"
+            android:id="@+id/textFirstNameRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Ingrese nombre"
+            android:layout_marginTop="40dp"
+            android:inputType="textPersonName" />
+        <EditText
+            android:id="@+id/textLastNameRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Ingrese apellido"
+            android:layout_marginTop="15dp"
+            android:inputType="textPersonName" />
+        <EditText
+            android:id="@+id/textAddressRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Ingrese dirección"
+            android:layout_marginTop="15dp"
+            android:inputType="textPersonName" />
+        <EditText
+            android:id="@+id/textPhoneRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Ingrese teléfono"
+            android:layout_marginTop="15dp"
+            android:inputType="textPersonName" />
+        <EditText
+            android:id="@+id/textEmailRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Email"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="15dp"
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/editTextPassword"
+            android:id="@+id/editTextPasswordRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -44,24 +76,24 @@
             android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/buttonLogin"
+            android:id="@+id/buttonRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:layout_marginRight="60dp"
             android:layout_marginLeft="60dp"
             android:backgroundTint="@color/main_theme"
-            android:text="Iniciar Sesión" />
+            android:text="GUARDAR" />
 
         <Button
-            android:id="@+id/buttonRegisterLogin"
+            android:id="@+id/buttonCancel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="9dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="60dp"
             android:layout_marginLeft="60dp"
             android:backgroundTint="@color/main_theme"
-            android:text="Registrarme" />
+            android:text="CANCELAR" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
