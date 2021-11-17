@@ -24,16 +24,7 @@ class RegisterActivity : AppCompatActivity() {
     private fun setup(){
         title="Hospitality"
         buttonCancel.setOnClickListener{
-            if(textEmailRegister.text.isNotEmpty()&&editTextPasswordRegister.text.isNotEmpty()){
-                FirebaseAuth.getInstance().createUserWithEmailAndPassword(textEmailRegister.text.toString(),
-                    editTextPasswordRegister.text.toString()).addOnCompleteListener {
-                        if(it.isSuccessful){
-
-                        }else{
-                            showAlert();
-                        }
-                }
-            }
+            onBackPressed()
         }
         buttonRegister.setOnClickListener{
             if(textEmailRegister.text.isNotEmpty()&&editTextPasswordRegister.text.isNotEmpty()){
