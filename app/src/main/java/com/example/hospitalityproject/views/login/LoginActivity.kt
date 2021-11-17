@@ -3,6 +3,7 @@ package com.example.hospitalityproject.views.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.hospitalityproject.R
@@ -27,6 +28,7 @@ class LoginActivity : AppCompatActivity() {
             if(editTextEmail.text.isNotEmpty()&&editTextPassword.text.isNotEmpty()){
                 FirebaseAuth.getInstance().signInWithEmailAndPassword(editTextEmail.text.toString(),
                     editTextPassword.text.toString()).addOnCompleteListener {
+                    Log.d("Test004", "$it")
                     if(it.isSuccessful){
                         val toast1 = Toast.makeText(
                             applicationContext,

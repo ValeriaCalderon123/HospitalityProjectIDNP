@@ -40,24 +40,26 @@ class RegisterActivity : AppCompatActivity() {
                 FirebaseAuth.getInstance().createUserWithEmailAndPassword(textEmailRegister.text.toString(),
                     editTextPasswordRegister.text.toString()).addOnCompleteListener {
                     if(it.isSuccessful){
+
                         val toast1 = Toast.makeText(
                             applicationContext,
                             "Registrado Correctamente", Toast.LENGTH_SHORT
                         )
 
                         toast1.show()
+
+                        db.collection("users").document(textEmailRegister.text.toString()).set(
+                            hashMapOf("firstName" to textFirstNameRegister.text.toString(),
+                                "lastName" to textLastNameRegister.text.toString(),
+                                "address" to textAddressRegister.text.toString(),
+                                "phone" to textPhoneRegister.text.toString())
+                        )
+                        onBackPressed()
                     }else{
                         showAlert();
                     }
                 }
             }
-            db.collection("users").document(textEmailRegister.text.toString()).set(
-                hashMapOf("firstName" to textFirstNameRegister.text.toString(),
-                          "lastName" to textLastNameRegister.text.toString(),
-                          "address" to textAddressRegister.text.toString(),
-                          "phone" to textPhoneRegister.text.toString())
-            )
-            onBackPressed()
         }
     }
     private fun showAlert(){
