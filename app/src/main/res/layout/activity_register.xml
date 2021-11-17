@@ -15,7 +15,7 @@
             android:id="@+id/textTitleRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:ems="10"
             android:hint="Ingrese nombre"
             android:inputType="textPersonName"
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Ingrese nombre"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:inputType="textPersonName" />
         <EditText
             android:id="@+id/textLastNameRegister"
@@ -89,7 +89,7 @@
             android:id="@+id/buttonCancel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="1dp"
             android:layout_marginRight="60dp"
             android:layout_marginLeft="60dp"
             android:backgroundTint="@color/main_theme"
