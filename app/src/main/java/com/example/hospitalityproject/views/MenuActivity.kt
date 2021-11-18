@@ -55,4 +55,5 @@ class MenuActivity : AppCompatActivity() {
         transaction.replace(R.id.nav_host_fragment_activity_menu, fragment)
         transaction.commit()
     }
+
 }
