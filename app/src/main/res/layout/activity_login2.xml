@@ -14,8 +14,8 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="32dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -25,30 +25,13 @@
             app:srcCompat="@drawable/ic_hospital_svgrepo_com" />
 
 
-        <TextView
-            android:id="@+id/textTitleRegister"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginRight="60dp"
-            android:layout_marginBottom="15dp"
-            android:ems="10"
-            android:hint="Ingrese nombre"
-            android:inputType="textPersonName"
-            android:text="INICIAR SESIÓN"
-            android:textAlignment="center"
-            android:textColor="#009688"
-            android:textSize="20dp"
-            tools:ignore="TouchTargetSizeCheck" />
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/editTextEmail"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="12dp"
             android:backgroundTint="@color/main_theme"
             app:startIconDrawable="@drawable/ic_baseline_email"
@@ -111,6 +94,14 @@
             app:layout_constraintStart_toStartOf="parent"
             android:text="Registrarme" />
 
+        <TextView
+            android:id="@+id/labelLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="----Ingresar por-----" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -118,10 +109,10 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/imageButton12"
+                android:id="@+id/faceButtonLog"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="36dp"
                 android:background="@drawable/button_social"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button2"
@@ -129,11 +120,11 @@
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
-                android:id="@+id/imageButton16"
+                android:id="@+id/googleButtonLog"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="36dp"
                 android:background="@drawable/button_social"
                 app:layout_constraintStart_toEndOf="@+id/imageButton12"
                 app:layout_constraintTop_toBottomOf="@+id/button2"
