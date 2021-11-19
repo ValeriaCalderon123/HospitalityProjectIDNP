@@ -10,7 +10,6 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.util.PatternsCompat
 import androidx.core.view.size
 import com.example.hospitalityproject.R
-import com.example.hospitalityproject.databinding.ActivityMainBinding
 import com.example.hospitalityproject.model.Initialization.Companion.pref
 import com.example.hospitalityproject.views.MenuActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -26,14 +25,13 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login2)
-        //Validar
-        //buttonLogin.setOnClickListener {}
+
         setup()
     }
     private fun setup(){
-        title="Hospitality"
+        title="Log in"
         buttonLogin.setOnClickListener {
-            validate()
+            validate() //Validar campos
             if(editTextEmail.editText?.text.toString().isNotEmpty()&&editTextPassword.editText?.text.toString().isNotEmpty()){
                 FirebaseAuth.getInstance().signInWithEmailAndPassword(editTextEmail.editText?.text.toString(),
                     editTextPassword.editText?.text.toString()).addOnCompleteListener {
@@ -121,7 +119,7 @@ class LoginActivity : AppCompatActivity() {
             editTextPassword.error = "Contraseña incorrecta"
             false
         }else {
-            editTextEmail.error = null
+            editTextPassword.error = null
             true
         }
     }
