@@ -72,7 +72,7 @@ class RegisterActivity : AppCompatActivity() {
 
     //LLAMA MÉTODOS DE VALIDACIÓN
     private fun validate(){
-        val result = arrayOf(validateName(), validateLastName(), validateEmail(), validatePassword())
+        val result = arrayOf(validateName(), validateLastName(), validatePhone(), validateEmail(), validatePassword())
         if(false in result){
             return
         }
@@ -118,9 +118,16 @@ class RegisterActivity : AppCompatActivity() {
     //VALIDAR NUMBER PHONE //NECESARIO?
     private fun validatePhone():Boolean{
         val phone = textPhoneRegister.editText?.text.toString()
-
+        val phoneRegex = Pattern.compile(
+            "^"+
+                    "[9]([0-9][ -]*){8}"+          //8 caracteres, puede ir un espacio en blanco, un guión o nada.
+                    "$"
+        )
         return if (phone.isEmpty()){
             textPhoneRegister.error = "Este campo no puede ser vacío"
+            false
+        }else if (!phoneRegex.matcher(phone).matches()){
+            textPhoneRegister.error = "Número no válido"
             false
         }else {
             textPhoneRegister.error = null
