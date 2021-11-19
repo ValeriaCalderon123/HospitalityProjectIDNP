@@ -158,7 +158,7 @@ class RegisterActivity : AppCompatActivity() {
                     "(?=.*[0-9])"+          //Al menos un dígito
                     "(?=.*[a-z])"+          //Al menos un caracter en minuscula
                     "(?=.*[A-Z])"+          //Al menos un caracter en mayuscula
-                    "(?=.*[@#$%^&+=])"+     //Al menos un caracter especial
+                    "(?=.*[@#?$%^&+=-_*])"+     //Al menos un caracter especial
                     "(?=\\S+$)"+            //Sin espacios
                     ".{4,}"+                //al menos 4 caracteres
                     "$"
