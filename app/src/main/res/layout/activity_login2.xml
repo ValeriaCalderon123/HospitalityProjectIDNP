@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ic_android_back1"
     tools:context=".views.login.LoginActivity">
 
     <LinearLayout
@@ -12,43 +13,127 @@
         android:layout_margin="20dp"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/editTextPersonName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Email"
-            android:layout_marginTop="40dp"
-            android:inputType="textPersonName" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_hospital_svgrepo_com" />
 
-        <EditText
-            android:id="@+id/editTextTextPassword"
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editTextEmail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="12dp"
+            app:hintTextColor="@color/teal_700"
+            app:boxBackgroundColor="#D0FFFFFF"
+            app:startIconDrawable="@drawable/ic_baseline_email"
+            android:hint="Correo"
+            app:errorEnabled="true"
+            app:errorIconDrawable="@null">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editTextPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            app:boxBackgroundColor="#D0FFFFFF"
+            app:hintTextColor="@color/teal_700"
             android:hint="Contraseña"
-            android:layout_marginTop="15dp"
-            android:inputType="textPassword" />
+            app:startIconDrawable="@drawable/ic_locked_password"
+            app:errorEnabled="true"
+            app:errorIconDrawable="@null"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/buttonLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_marginRight="60dp"
-            android:layout_marginLeft="60dp"
-            android:backgroundTint="@color/main_theme"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/teal_700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             android:text="Iniciar Sesión" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/buttonRegisterLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="60dp"
+            android:backgroundTint="#0022AC9F"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Registrarme" />
+
+        <TextView
+            android:id="@+id/labelLog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginRight="60dp"
-            android:layout_marginLeft="60dp"
-            android:backgroundTint="@color/main_theme"
-            android:text="Registrarme" />
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:text="----- Ingresar por -----" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/faceButtonLog"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/button_social"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button2"
+                app:srcCompat="@drawable/ic_icons8_facebook"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/googleButtonLog"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/button_social"
+                app:layout_constraintStart_toEndOf="@+id/imageButton12"
+                app:layout_constraintTop_toBottomOf="@+id/button2"
+                app:srcCompat="@drawable/ic_icons8_logo_de_google"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </LinearLayout>
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

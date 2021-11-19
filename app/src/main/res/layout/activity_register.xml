@@ -4,132 +4,159 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.login.LoginActivity">
-
+    tools:context=".views.login.RegisterActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="20dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="24dp">
+        android:orientation="vertical">
+
 
         <TextView
-            android:id="@+id/id_Titulo"
+            android:id="@+id/textTitleRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:foregroundTint="#8C2D2D"
-            android:gravity="center"
-            android:text="REGISTRATE"
-            android:textColor="@color/main_theme"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="60dp"
+            android:ems="10"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:text="REGISTRARME"
+            android:textAlignment="center"
+            android:textColor="#009688"
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/editTextPersonName"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFirstNameRegister"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:ems="10"
-            android:hint="Nombres"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/editTextPersonApellidos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:ems="10"
-            android:hint="Apellidos"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/editTextPersonDireccion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:ems="10"
-            android:hint="Dirección"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/editTextPersonDNI"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:ems="10"
-            android:hint="DNI"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:ems="10"
-            android:hint="Email"
-            android:inputType="textPersonName" />
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="74dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textGenero"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15sp"
-                    android:text="Genero"
-                    android:textSize="18sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/radioButton7"
-                        android:layout_width="175dp"
-                        android:layout_height="wrap_content"
-                        android:text="Femenino" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton8"
-                        android:layout_width="179dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Masculino" />
-                </LinearLayout>
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginRight="60dp"
+            android:layout_marginTop="20dp"
             android:backgroundTint="@color/main_theme"
-            android:text="Registrarme"
-            app:rippleColor="@color/main_theme" />
+            app:boxBackgroundColor="@android:color/transparent"
+            app:startIconDrawable="@drawable/ic_baseline_account_circle_24"
+            android:hint="Nombres">
 
-        <Button
-            android:id="@+id/button2"
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textLastNameRegister"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginRight="60dp"
-            android:backgroundTint="#7FD6CE"
-            android:text="Borrar" />
+            android:hint="Apellidos"
+            android:layout_marginTop="15dp"
+            app:startIconDrawable="@drawable/ic_baseline_account_circle_24"
+            android:backgroundTint="@color/main_theme"
+            app:boxBackgroundColor="@android:color/transparent">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textAddressRegister"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dirección"
+            android:layout_marginTop="15dp"
+            app:startIconDrawable="@drawable/ic_baseline_assistant_direction_24"
+            android:backgroundTint="@color/main_theme"
+            app:boxBackgroundColor="@android:color/transparent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textPhoneRegister"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Móvil"
+            android:layout_marginTop="15dp"
+            app:startIconDrawable="@drawable/ic_baseline_local_phone_24"
+            android:backgroundTint="@color/main_theme"
+            app:boxBackgroundColor="@android:color/transparent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textEmailRegister"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo"
+            android:layout_marginTop="15dp"
+            app:startIconDrawable="@drawable/ic_baseline_email"
+            android:backgroundTint="@color/main_theme"
+            app:boxBackgroundColor="@android:color/transparent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editTextPasswordRegister"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:layout_marginTop="15dp"
+            app:startIconDrawable="@drawable/ic_locked_password"
+            android:backgroundTint="@color/main_theme"
+            app:boxBackgroundColor="@android:color/transparent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/main_theme"
+            android:text="GUARDAR" />
+
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="#0022AC9F"
+            android:textColor="@color/black"
+            android:text="CANCELAR" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
