@@ -3,6 +3,7 @@ package com.example.hospitalityproject.views.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import android.widget.Toast.LENGTH_LONG
 import androidx.appcompat.app.AlertDialog
@@ -34,6 +35,7 @@ class RegisterActivity : AppCompatActivity() {
             if(textEmailRegister.editText?.text.toString().isNotEmpty()&&editTextPasswordRegister.editText?.text.toString().isNotEmpty()){
                 FirebaseAuth.getInstance().createUserWithEmailAndPassword(textEmailRegister.editText?.text.toString(),
                     editTextPasswordRegister.editText?.text.toString()).addOnCompleteListener {
+                    Log.d("Test004", "$it")
                     if(it.isSuccessful){
 
                         val toast1 = Toast.makeText(
@@ -166,7 +168,7 @@ class RegisterActivity : AppCompatActivity() {
             false
         }else if(!passwordRegex.matcher(password).matches()){
             //Para registrar
-            if(editTextPasswordRegister.size<5 ){
+            if(editTextPasswordRegister.toString().length<5 ){
                 editTextPasswordRegister.error = "Ingrese una contraseña más larga"
             }else{
                 editTextPasswordRegister.error = "Ingrese otra contraseña"

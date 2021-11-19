@@ -37,7 +37,6 @@ class LoginActivity : AppCompatActivity() {
                     editTextPassword.editText?.text.toString()).addOnCompleteListener {
                     Log.d("Test004", "$it")
 
-
                     if(it.isSuccessful){
                         val toast1 = Toast.makeText(
                             applicationContext,
@@ -108,15 +107,6 @@ class LoginActivity : AppCompatActivity() {
         )
         return if (editTextPassword.editText?.text.toString().isEmpty()){
             editTextPassword.error = "Este campo no puede ser vacío"
-            false
-        }else if(!passwordRegex.matcher(password).matches()){
-            /*Para registrar
-            if(editTextPassword.size<5){
-                editTextPassword.error = "Ingrese una contraseña más larga"
-            }else{
-                editTextPassword.error = "Ingrese otra contraseña"
-            }*/
-            editTextPassword.error = "Contraseña incorrecta"
             false
         }else {
             editTextPassword.error = null
