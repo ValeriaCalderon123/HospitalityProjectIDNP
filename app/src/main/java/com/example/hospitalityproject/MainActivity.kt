@@ -8,6 +8,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.e("Hi", "Vale pruebas ")
+        Log.e("Hi", "Vale pruebas 2")
     }
 }
