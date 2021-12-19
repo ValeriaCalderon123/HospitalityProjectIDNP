@@ -1,5 +1,6 @@
 package com.example.hospitalityproject.views.ui.hospitals
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.*
 import com.example.hospitalityproject.R
 import com.example.hospitalityproject.model.Hospital
 import com.google.firebase.firestore.FirebaseFirestore
@@ -16,16 +18,22 @@ import kotlinx.android.synthetic.main.fragment_hospital.view.*
 class HospitalFragment : Fragment() {
 
     private val db = FirebaseFirestore.getInstance()
+    private lateinit var spnCategoriasPorHospital: Spinner
+    private lateinit var edtSeleccFechaReserva: EditText
+    private lateinit var inpSeleccHoraReserva: TimePicker
+    private lateinit var edtCodigoPagoReserva: EditText
+    private lateinit var btnReservarCita: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         val view = inflater.inflate(R.layout.fragment_hospital, container, false)
         val bundle = this.arguments
 
         val id = bundle?.getString("id")
-
+/*
 //        if(bundle != null)
 //            view.textViewHospitalName.text = id
 
@@ -67,6 +75,53 @@ class HospitalFragment : Fragment() {
         )
 
         return view
+        */
+
+        spnCategoriasPorHospital = view.findViewById(R.id.spnCategoriasPorHospital)
+        edtSeleccFechaReserva = view.findViewById(R.id.edtSeleccionarFechaDeReserva)
+        inpSeleccHoraReserva = view.findViewById(R.id.inpSeleccionHoraDeReserva)
+        edtCodigoPagoReserva = view.findViewById(R.id.edtCodigoDePagoReserva)
+        btnReservarCita = view.findViewById(R.id.btnReservarCitaEnHospital)
+        val listaCategorias: ArrayList<String> = ArrayList()
+
+        db.collection("especialidad")
+            .whereEqualTo("codHospital", "$id")
+            .get()
+            .addOnSuccessListener { documents ->
+                for(document in documents){
+                    listaCategorias.add(document.get("nombre").toString())
+                }
+                Log.e("arrayEspecialidades", listaCategorias.toString())
+                spnCategoriasPorHospital.adapter = activity?.let {
+                    ArrayAdapter(
+                        it,
+                        android.R.layout.simple_spinner_dropdown_item,
+                        listaCategorias
+                    )
+                }
+            }
+
+        edtSeleccFechaReserva.setOnClickListener{
+            showDatePickerDialog()
+        }
+
+        btnReservarCita.setOnClickListener {
+            Log.e("InfoSpinner", spnCategoriasPorHospital.selectedItem.toString())
+            Log.e("FechaEdt", edtSeleccFechaReserva.text.toString())
+            Log.e("HoraReserva", inpSeleccHoraReserva.hour.toString() + ":" + inpSeleccHoraReserva.minute.toString())
+            Log.e("Pago", edtCodigoPagoReserva.text.toString())
+        }
+
+        return view
+
+    }
+
+    private fun showDatePickerDialog() {
+        val newFragment = DatePickerFragment.newInstance(DatePickerDialog.OnDateSetListener{ _, year, month, day ->
+            val selectDate = day.toString() + "/" + (month + 1) + "/" + year
+            edtSeleccFechaReserva.setText(selectDate)
+        })
+        fragmentManager?.let { newFragment.show(it, "datePicker") }
     }
 
 }
