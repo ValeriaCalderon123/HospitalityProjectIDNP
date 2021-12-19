@@ -59,7 +59,7 @@ class HospitalsFragment : Fragment(), HospitalsView{
     }
 
     override fun onItemClicked(id: String) {
-        Toast.makeText(this.context, ":v $id", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this.context, "$id", Toast.LENGTH_SHORT).show()
 
         /*
         val appCompatActivity = this.context as AppCompatActivity

@@ -66,7 +66,6 @@ class FirestoreAdapterHospitals(options: FirestoreRecyclerOptions<Hospital>, val
 
         init {
             itemView.setOnClickListener(this)
-
         }
 
         override fun onClick(p0: View?) {
