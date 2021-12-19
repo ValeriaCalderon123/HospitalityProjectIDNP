@@ -109,7 +109,7 @@ class HospitalFragment : Fragment() {
             Log.e("InfoSpinner", spnCategoriasPorHospital.selectedItem.toString())
             Log.e("FechaEdt", edtSeleccFechaReserva.text.toString())
             Log.e("HoraReserva", inpSeleccHoraReserva.hour.toString() + ":" + inpSeleccHoraReserva.minute.toString())
-            Log.e("Pago", edtCodigoPagoReserva.text.toString())
+            Log.e("PagodeCita", edtCodigoPagoReserva.text.toString())
         }
 
         return view
