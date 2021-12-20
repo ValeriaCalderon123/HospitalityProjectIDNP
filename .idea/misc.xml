@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProjects/HospitalityProjectIDNP/app/src/main/res/layout/fragment_hospital.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidProjects/HospitalityProjectIDNP/app/src/main/res/layout/fragment_hospital_view.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidProjects/HospitalityProjectIDNP/app/src/main/res/layout/fragment_hospitals.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidProjects/HospitalityProjectIDNP/app/src/main/res/layout/fragment_test.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidProjects/HospitalityProjectIDNP/app/src/main/res/layout/list_hospitales.xml" value="0.20520833333333333" />
         <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.21875" />
         <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.21875" />
         <entry key="..\:/Programming/IDNP/FinalProject2/HospitalityProjectIDNP/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.21875" />
