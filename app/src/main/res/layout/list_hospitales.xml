@@ -35,7 +35,7 @@
             android:layout_marginBottom="10dp"
             android:layout_toEndOf="@+id/imagen"
             android:layout_toRightOf="@+id/imagen"
-            android:text="Nombre del Hospital"
+            android:text=""
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -50,7 +50,7 @@
             android:layout_marginBottom="10dp"
             android:layout_toEndOf="@+id/imagen"
             android:layout_toRightOf="@+id/imagen"
-            android:text="id" />
+            android:text="" />
 
         <TextView
             android:id="@+id/hospital_phone"
@@ -63,7 +63,7 @@
             android:layout_marginBottom="10dp"
             android:layout_toEndOf="@+id/imagen"
             android:layout_toRightOf="@+id/imagen"
-            android:text="Teléfono" />
+            android:text="" />
 
         <TextView
             android:id="@+id/hospital_address"

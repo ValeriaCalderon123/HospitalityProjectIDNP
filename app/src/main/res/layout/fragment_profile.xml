@@ -22,7 +22,7 @@
             android:layout_marginRight="60dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="EDITAR MI PERFIL"
+            android:text="@string/editar_perfil"
             android:textAlignment="center"
             android:textColor="#009688"
             android:textSize="24sp"
@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Ingrese nombre"
+            android:hint="@string/editar_nombre"
             android:layout_marginTop="25dp"
             android:inputType="textPersonName" />
         <EditText
@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Ingrese apellido"
+            android:hint="@string/editar_apellido"
             android:layout_marginTop="15dp"
             android:inputType="textPersonName" />
         <EditText
@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Ingrese dirección"
+            android:hint="@string/editar_direccion"
             android:layout_marginTop="15dp"
             android:inputType="textPersonName" />
         <EditText
@@ -56,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Ingrese teléfono"
+            android:hint="@string/editar_telefono"
             android:layout_marginTop="15dp"
             android:inputType="textPersonName" />
 
@@ -70,7 +70,7 @@
             android:layout_marginRight="60dp"
             android:layout_marginLeft="60dp"
             android:backgroundTint="@color/main_theme"
-            android:text="GUARDAR" />
+            android:text="@string/editar_guardar" />
 
         <Button
             android:id="@+id/buttonLogout"
@@ -80,6 +80,6 @@
             android:layout_marginRight="60dp"
             android:layout_marginLeft="60dp"
             android:backgroundTint="@color/main_theme"
-            android:text="CERRAR SESIÓN" />
+            android:text="@string/editar_cerrar" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

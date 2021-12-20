@@ -37,7 +37,7 @@
             app:hintTextColor="@color/teal_700"
             app:boxBackgroundColor="#D0FFFFFF"
             app:startIconDrawable="@drawable/ic_baseline_email"
-            android:hint="Correo"
+            android:hint="@string/login_correo"
             app:errorEnabled="true"
             app:errorIconDrawable="@null">
 
@@ -57,7 +57,7 @@
             android:layout_marginEnd="12dp"
             app:boxBackgroundColor="#D0FFFFFF"
             app:hintTextColor="@color/teal_700"
-            android:hint="Contraseña"
+            android:hint="@string/login_contraseña"
             app:startIconDrawable="@drawable/ic_locked_password"
             app:errorEnabled="true"
             app:errorIconDrawable="@null"
@@ -80,7 +80,7 @@
             android:textColor="@color/teal_700"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:text="Iniciar Sesión" />
+            android:text="@string/login_iniciarSesion" />
 
         <Button
             android:id="@+id/buttonRegisterLogin"
@@ -94,7 +94,7 @@
             android:textColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:text="Registrarme" />
+            android:text="@string/login_registrarme" />
 
         <TextView
             android:id="@+id/labelLog"
@@ -102,7 +102,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
             android:gravity="center"
-            android:text="----- Ingresar por -----" />
+            android:text="@string/login_ingresar" />
 
         <LinearLayout
             android:layout_width="match_parent"

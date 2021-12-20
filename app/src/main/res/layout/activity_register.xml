@@ -20,10 +20,9 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="60dp"
             android:ems="10"
-            android:hint="Nombre"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="REGISTRARME"
+            android:text="@string/title_register"
             android:textAlignment="center"
             android:textColor="#009688"
             android:textSize="24sp"
@@ -38,7 +37,7 @@
             android:backgroundTint="@color/main_theme"
             app:boxBackgroundColor="@android:color/transparent"
             app:startIconDrawable="@drawable/ic_baseline_account_circle_24"
-            android:hint="Nombres">
+            android:hint="@string/registro_nombre">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -52,7 +51,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Apellidos"
+            android:hint="@string/registro_apellidos"
             android:layout_marginTop="15dp"
             app:startIconDrawable="@drawable/ic_baseline_account_circle_24"
             android:backgroundTint="@color/main_theme"
@@ -70,7 +69,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Dirección"
+            android:hint="@string/registro_direccion"
             android:layout_marginTop="15dp"
             app:startIconDrawable="@drawable/ic_baseline_assistant_direction_24"
             android:backgroundTint="@color/main_theme"
@@ -88,7 +87,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Móvil"
+            android:hint="@string/registro_movil"
             android:layout_marginTop="15dp"
             app:startIconDrawable="@drawable/ic_baseline_local_phone_24"
             android:backgroundTint="@color/main_theme"
@@ -106,7 +105,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Correo"
+            android:hint="@string/registro_correo"
             android:layout_marginTop="15dp"
             app:startIconDrawable="@drawable/ic_baseline_email"
             android:backgroundTint="@color/main_theme"
@@ -124,7 +123,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Contraseña"
+            android:hint="@string/registro_contraseña"
             android:layout_marginTop="15dp"
             app:startIconDrawable="@drawable/ic_locked_password"
             android:backgroundTint="@color/main_theme"
@@ -145,7 +144,7 @@
             android:layout_marginEnd="32dp"
             android:layout_marginTop="24dp"
             android:backgroundTint="@color/main_theme"
-            android:text="GUARDAR" />
+            android:text="@string/registro_guardar" />
 
         <Button
             android:id="@+id/buttonCancel"
@@ -156,7 +155,7 @@
             android:layout_marginEnd="32dp"
             android:backgroundTint="#0022AC9F"
             android:textColor="@color/black"
-            android:text="CANCELAR" />
+            android:text="@string/registro_cancelar" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

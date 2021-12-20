@@ -18,7 +18,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
-        android:hint="Ingrese categoria de hospital" />
+        android:hint="@string/inicio_categoria" />
 
     <Button
         android:id="@+id/sendData"
@@ -27,7 +27,7 @@
         android:layout_below="@+id/category"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="45dp"
-        android:text="Enviar datos"
+        android:text="@string/inicio_enviar"
 
         android:textSize="18sp" />
 
