@@ -16,7 +16,7 @@
     <string name="registro_nombre">Nombres</string>
     <string name="registro_apellidos">Apellidos</string>
     <string name="registro_direccion">Dirección</string>
-    <string name="registro_movil">Movil</string>
+    <string name="registro_movil">Móvil</string>
     <string name="registro_correo">Correo</string>
     <string name="registro_contraseña">Contraseña</string>
     <string name="registro_guardar">GUARDAR</string>
@@ -31,9 +31,9 @@
     <string name="editar_cerrar">CERRAR SESIÓN</string>
 
 
-    <string name="inicio_categoria">Ingrese categoria de hospital</string>
+    <string name="inicio_categoria">Ingrese categoría de hospital</string>
     <string name="inicio_enviar">Enviar Datos</string>
-    <string name="inicio_cate">Categoria</string>
+    <string name="inicio_cate">Categoría</string>
 
 
     <string name="home_hospital">Hospital Disponible</string>
@@ -56,5 +56,8 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="hospitales_disponibles">HOSPITALES DISPONIBLES</string>
+    <string name="ReservarCita">Reservar Cita</string>
+    <string name="reserve_date_attention">Elija fecha de reserva</string>
 
 </resources>
