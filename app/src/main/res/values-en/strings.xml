@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">HospitalityProject</string>
     <string name="title_activity_menu">MenuActivity</string>
-    <string name="title_home">Start</string>
+    <string name="title_home">Home</string>
     <string name="title_hospital">Hospital</string>
     <string name="title_analytics">Statistics</string>
     <string name="title_profile">Profile</string>
@@ -35,7 +35,7 @@
     <string name="editar_direccion">Enter Address</string>
     <string name="editar_telefono">Enter Phone</string>
     <string name="editar_guardar">SAVE</string>
-    <string name="editar_cerrar">SIGN OFF</string>
+    <string name="editar_cerrar">LOG OUT</string>
 
     <string name="list_nombre">Hospital Name</string>
     <string name="list_id">Id</string>
@@ -52,5 +52,9 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="reserve_date_attention">Reserve date attention</string>
+    <string name="ReservarCita">Book Appointment</string>
+    <string name="hospitales_disponibles">Available hospitals</string>
+
 
 </resources>

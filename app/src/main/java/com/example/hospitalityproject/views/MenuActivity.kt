@@ -1,6 +1,7 @@
 package com.example.hospitalityproject.views
 
 import android.app.Notification
+import android.os.Build
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -25,6 +26,10 @@ class MenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_menu)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            this.window.navigationBarColor = android.graphics.Color.parseColor("#ffffff");
+        }
 
         bottomNavigationView = findViewById(R.id.nav_view)
 
