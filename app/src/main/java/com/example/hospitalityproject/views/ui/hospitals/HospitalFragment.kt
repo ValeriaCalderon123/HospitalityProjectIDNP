@@ -1,6 +1,7 @@
 package com.example.hospitalityproject.views.ui.hospitals
 
 import android.app.DatePickerDialog
+import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
@@ -11,8 +12,10 @@ import android.view.ViewGroup
 import android.widget.*
 import com.example.hospitalityproject.R
 import com.example.hospitalityproject.model.Hospital
+import com.example.hospitalityproject.model.Initialization.Companion.pref
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.GeoPoint
+import kotlinx.android.synthetic.main.activity_register.*
 import kotlinx.android.synthetic.main.fragment_hospital.view.*
 
 class HospitalFragment : Fragment() {
@@ -106,6 +109,31 @@ class HospitalFragment : Fragment() {
         }
 
         btnReservarCita.setOnClickListener {
+            var isExist=0;
+            db.collection("citas")
+                .whereEqualTo("fecha", edtSeleccFechaReserva.text.toString())
+                .get()
+                .addOnSuccessListener {documents->
+                    var existDoc = documents.documents
+                    if(existDoc.isEmpty()){
+                        db.collection("citas").add(
+                            hashMapOf("codigoPago" to edtCodigoPagoReserva.text.toString(),
+                                "especialidad" to spnCategoriasPorHospital.selectedItem.toString(),
+                                "fecha" to edtSeleccFechaReserva.text.toString(),
+                                "user" to pref.getEmail())
+                        )
+                    }
+                    else{
+                        val toast1 = Toast.makeText(
+                            this.context,
+                            "Ya existe recerva para esta fecha", Toast.LENGTH_SHORT
+                        )
+                        toast1.show()
+                    }
+
+                }
+
+
             Log.e("InfoSpinner", spnCategoriasPorHospital.selectedItem.toString())
             Log.e("FechaEdt", edtSeleccFechaReserva.text.toString())
             Log.e("HoraReserva", inpSeleccHoraReserva.hour.toString() + ":" + inpSeleccHoraReserva.minute.toString())
