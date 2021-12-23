@@ -112,6 +112,8 @@ class HospitalFragment : Fragment() {
             var isExist=0;
             db.collection("citas")
                 .whereEqualTo("fecha", edtSeleccFechaReserva.text.toString())
+                .whereEqualTo("hora", inpSeleccHoraReserva.hour.toString() + ":" + inpSeleccHoraReserva.minute.toString())
+                .whereEqualTo("especialidad", spnCategoriasPorHospital.selectedItem.toString())
                 .get()
                 .addOnSuccessListener {documents->
                     var existDoc = documents.documents
@@ -120,13 +122,19 @@ class HospitalFragment : Fragment() {
                             hashMapOf("codigoPago" to edtCodigoPagoReserva.text.toString(),
                                 "especialidad" to spnCategoriasPorHospital.selectedItem.toString(),
                                 "fecha" to edtSeleccFechaReserva.text.toString(),
+                                "hora" to inpSeleccHoraReserva.hour.toString() + ":" + inpSeleccHoraReserva.minute.toString(),
                                 "user" to pref.getEmail())
                         )
+                        val toast1 = Toast.makeText(
+                            this.context,
+                            "Reserva realizada exitósamente!", Toast.LENGTH_LONG
+                        )
+                        toast1.show()
                     }
                     else{
                         val toast1 = Toast.makeText(
                             this.context,
-                            "Ya existe recerva para esta fecha", Toast.LENGTH_SHORT
+                            "Ya existe recerva para esta fecha", Toast.LENGTH_LONG
                         )
                         toast1.show()
                     }
