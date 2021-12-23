@@ -39,14 +39,15 @@
         android:id="@+id/edtSeleccionarFechaDeReserva"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:ems="10"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:hint="@string/reserve_date_attention"
-        android:focusable="false"
         android:clickable="true"
-        android:maxLines="1"
-        android:inputType="date" />
+        android:ems="10"
+        android:focusable="false"
+        android:hint="@string/reserve_date_attention"
+        android:inputType="date"
+        android:drawableLeft="@drawable/ic_baseline_calendar_today_24"
+        android:maxLines="1" />
 
     <Space
         android:layout_width="match_parent"
