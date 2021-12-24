@@ -211,26 +211,7 @@ class HospitalFragment : Fragment() {
         intent.type = "image/*"
         startActivityForResult(intent, IMAGE_PICK_CODE)
     }
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == File) {
-            if (resultCode == RESULT_OK) {
-                val FileUri = data!!.data
-                val Folder: StorageReference =
-                    FirebaseStorage.getInstance().getReference().child("User")
-                val file_name: StorageReference = Folder.child("file" + FileUri!!.lastPathSegment)
-                file_name.putFile(FileUri).addOnSuccessListener { taskSnapshot ->
-                    file_name.getDownloadUrl().addOnSuccessListener { uri ->
-                        val hashMap =
-                            HashMap<String, String>()
-                        hashMap["link"] = java.lang.String.valueOf(uri)
-                        myRef.setValue(hashMap)
-                        Log.d("Mensaje", "Se subió correctamente")
-                    }
-                }
-            }
-        }
-    }
+
     companion object {
         //image pick code
         private val IMAGE_PICK_CODE = 1000;
