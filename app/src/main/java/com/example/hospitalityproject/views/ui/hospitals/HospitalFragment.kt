@@ -1,8 +1,8 @@
 package com.example.hospitalityproject.views.ui.hospitals
 
+import android.app.Activity
 import android.app.DatePickerDialog
 import android.content.Context
-import android.os.Bundle
 import android.os.Handler
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -10,13 +10,29 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import com.example.hospitalityproject.R
 import com.example.hospitalityproject.model.Hospital
 import com.example.hospitalityproject.model.Initialization.Companion.pref
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.GeoPoint
 import kotlinx.android.synthetic.main.activity_register.*
+import kotlinx.android.synthetic.main.fragment_hospital.*
 import kotlinx.android.synthetic.main.fragment_hospital.view.*
+import androidx.core.app.ActivityCompat.startActivityForResult
+
+import android.provider.MediaStore
+
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.database.Cursor
+import android.graphics.Bitmap
+import android.net.Uri
+
+import java.io.ByteArrayOutputStream
+import java.io.File
+
 
 class HospitalFragment : Fragment() {
 
@@ -26,6 +42,13 @@ class HospitalFragment : Fragment() {
     private lateinit var inpSeleccHoraReserva: TimePicker
     private lateinit var edtCodigoPagoReserva: EditText
     private lateinit var btnReservarCita: Button
+    private lateinit var btnCargaImagenH: Button
+    private val ALL_PERMISSIONS_RESULT = 107
+    private val IMAGE_RESULT = 200
+    private val REQUEST_IMAGE_CAPTURE = 12345
+
+    var mBitmap: Bitmap? = null
+    val permission = 1
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -85,6 +108,7 @@ class HospitalFragment : Fragment() {
         inpSeleccHoraReserva = view.findViewById(R.id.inpSeleccionHoraDeReserva)
         edtCodigoPagoReserva = view.findViewById(R.id.edtCodigoDePagoReserva)
         btnReservarCita = view.findViewById(R.id.btnReservarCitaEnHospital)
+        btnCargaImagenH = view.findViewById(R.id.btnCargaImagen)
         val listaCategorias: ArrayList<String> = ArrayList()
 
         db.collection("especialidad")
@@ -106,6 +130,10 @@ class HospitalFragment : Fragment() {
 
         edtSeleccFechaReserva.setOnClickListener{
             showDatePickerDialog()
+        }
+
+        btnCargaImagenH.setOnClickListener{
+           selectImage()
         }
 
         btnReservarCita.setOnClickListener {
@@ -150,6 +178,64 @@ class HospitalFragment : Fragment() {
 
         return view
 
+    }
+
+    private fun selectImage() {
+        pickImageFromGallery()
+
+    }
+    fun hasPermissionInManifest(context: Context, permissionName: String): Boolean {
+        val packageName = context.packageName
+        try {
+            val packageInfo = context.packageManager
+                .getPackageInfo(packageName, PackageManager.GET_PERMISSIONS)
+            val declaredPermisisons = packageInfo.requestedPermissions
+            if (declaredPermisisons != null && declaredPermisisons.size > 0) {
+                for (p in declaredPermisisons) {
+                    if (p == permissionName) {
+                        return true
+                    }
+                }
+            }
+        } catch (e: PackageManager.NameNotFoundException) {
+
+        }
+
+        return false
+    }
+
+
+    private fun pickImageFromGallery() {
+        //Intent to pick image
+        val intent = Intent(Intent.ACTION_PICK)
+        intent.type = "image/*"
+        startActivityForResult(intent, IMAGE_PICK_CODE)
+    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == File) {
+            if (resultCode == RESULT_OK) {
+                val FileUri = data!!.data
+                val Folder: StorageReference =
+                    FirebaseStorage.getInstance().getReference().child("User")
+                val file_name: StorageReference = Folder.child("file" + FileUri!!.lastPathSegment)
+                file_name.putFile(FileUri).addOnSuccessListener { taskSnapshot ->
+                    file_name.getDownloadUrl().addOnSuccessListener { uri ->
+                        val hashMap =
+                            HashMap<String, String>()
+                        hashMap["link"] = java.lang.String.valueOf(uri)
+                        myRef.setValue(hashMap)
+                        Log.d("Mensaje", "Se subió correctamente")
+                    }
+                }
+            }
+        }
+    }
+    companion object {
+        //image pick code
+        private val IMAGE_PICK_CODE = 1000;
+        //Permission code
+        private val PERMISSION_CODE = 1001;
     }
 
     private fun showDatePickerDialog() {

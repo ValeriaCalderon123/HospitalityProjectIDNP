@@ -62,18 +62,37 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="15dp" />
+        android:layout_height="20dp" />
 
-    <EditText
-        android:id="@+id/edtCodigoDePagoReserva"
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:hint="Ingrese código de pago"
-        android:layout_marginRight="25dp"
-        android:layout_marginLeft="25dp"
-        android:inputType="textPersonName" />
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:layout_marginBottom="25dp"
+        android:orientation="horizontal"
+        tools:context=".views.ui.hospitals.HospitalFragment">
 
+        <EditText
+            android:id="@+id/edtCodigoDePagoReserva"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:ems="10"
+            android:hint="Ingrese código de pago"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/btnCargaImagen"
+            android:layout_width="120dp"
+            android:layout_height="38dp"
+
+            android:background="#fff87a"
+            android:text="Cargar" />
+
+
+    </LinearLayout>
     <Button
         android:id="@+id/btnReservarCitaEnHospital"
         android:layout_width="match_parent"
